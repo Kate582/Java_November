@@ -28,8 +28,6 @@ public class ContactHelper extends HelperBase {
     type(By.name("lastname"), contactData.getLastname());
     type(By.name("company"), contactData.getCompany());
     type(By.name("address"), contactData.getAddress());
-    click(By.name("new_group"));
-    new Select(wd.findElement(By.name("new_group"))).selectByVisibleText("groupname");
   }
 
   public void initContactCreation() {
@@ -58,5 +56,13 @@ public class ContactHelper extends HelperBase {
     } finally {
       acceptNextAlert = true;
     }
+  }
+
+  public void initContactModification() {
+    click(By.xpath("(//img[@alt='Edit'])[3]"));
+  }
+
+  public void submitContactModification() {
+    click(By.name("update"));
   }
 }

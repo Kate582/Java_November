@@ -3,15 +3,15 @@ package ru.stqa.pft.addressbook.tests;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-public class ContactCreationTests extends TestBase {
+public class ContactModificationTests extends TestBase {
 
   @Test
-  public void testContactCreation() throws Exception {
+  public void TestsContactModification() {
     app.getNavigationHelper().gotoHomePage();
-    app.getContactHelper().initContactCreation();
+    app.getContactHelper().SelectContact();
+    app.getContactHelper().initContactModification();
     app.getContactHelper().fillContactForm(new ContactData("Ivan", "Petrov", "Home", "Moscow, Red Square"));
-    app.getContactHelper().submitContactCreation();
-    app.getContactHelper().returnToHomePage();
+    app.getContactHelper().submitContactModification();
   }
 
 }
