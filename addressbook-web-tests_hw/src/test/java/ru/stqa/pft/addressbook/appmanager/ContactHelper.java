@@ -2,6 +2,7 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.ContactData;
@@ -11,7 +12,7 @@ import static org.testng.Assert.assertTrue;
 public class ContactHelper extends HelperBase {
   public boolean acceptNextAlert = true;
 
-  public ContactHelper(ChromeDriver wd) {
+  public ContactHelper(WebDriver wd) {
     super(wd);
   }
 
